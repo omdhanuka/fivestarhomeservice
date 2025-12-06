@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fivestar Electrical Repair Website
 
 A modern, responsive electrical appliance repair website built with Vite + React and Firebase.
@@ -40,3 +41,6 @@ npm run build
 ```
 
 ## 📁 Project Structure
+=======
+# fivestarhomeservice
+>>>>>>> 31494f87c31c7bc94960d6216d727c0f84ffc255

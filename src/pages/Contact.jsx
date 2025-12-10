@@ -170,15 +170,17 @@ const Contact = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
               Our Location
             </h2>
-            {/* TODO: Add Google Maps embed here */}
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <p className="text-gray-600">
-                📍 Add Google Maps embed here
-                <br />
-                <span className="text-sm">
-                  Search for "Google Maps embed generator" to create embed code
-                </span>
-              </p>
+            <div className="rounded-lg overflow-hidden h-96">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.200078877979!2d83.6207821!3d21.3347058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a214b3bcfe96e85%3A0x716d64025d3dde0!2sFIVE%20STAR%20HOME%20SERVICE!5e0!3m2!1sen!2sin!4v1765364139198!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Five Star Home Service Location"
+              ></iframe>
             </div>
           </div>
         </div>

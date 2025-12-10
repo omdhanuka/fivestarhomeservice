@@ -1,14 +1,14 @@
 // ⚠️ UPDATE ALL VALUES BELOW WITH YOUR ACTUAL BUSINESS INFORMATION
 
 export const BUSINESS_INFO = {
-  name: "Fivestar Electrical Repair", // UPDATE
-  phone: "+919999999999", // UPDATE (include country code)
-  whatsapp: "+919999999999", // UPDATE (include country code)
-  email: "contact@fivestar.com", // UPDATE
-  address: "123 Main Street, Your City, State - 123456", // UPDATE
+  name: "Fivestar Home Service", // UPDATE
+  phone: "+917008041854", // UPDATE (include country code)
+  whatsapp: "+917008041854", // UPDATE (include country code)
+  email: "fivestarhomeservice999@gmail.com", // UPDATE
+  address: "Near Thana Chowk, Mohanty Pada, W.No-11, Bargarh-768028, Odisha", // UPDATE
   operatingHours: "Mon-Sat: 9:00 AM - 8:00 PM", // UPDATE
   serviceAreas: ["Area 1", "Area 2", "Area 3"], // UPDATE
-  experience: "10+ years", // UPDATE
+  experience: "7+ years", // UPDATE
   brandColor: "#3B82F6" // UPDATE (use your brand color hex code)
 };
 
@@ -80,4 +80,11 @@ export const ABOUT_CONTENT = {
     "100% Satisfaction Guarantee"
     // UPDATE - Add/remove points as needed
   ]
+};
+
+// Statistics for Home Page
+export const STATISTICS = {
+  yearsExperience: "7+",
+  happyCustomers: "50+",
+  projectsCompleted: "70+"
 };

@@ -1,7 +1,7 @@
 import { BUSINESS_INFO } from '../config';
 
 const WhatsAppButton = () => {
-  const whatsappUrl = `https://wa.me/${BUSINESS_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=Hi, I need appliance repair service`;
+  const whatsappUrl = `https://wa.me/${BUSINESS_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=Hello! I want to book a service. Please assist.`;
 
   return (
     <a

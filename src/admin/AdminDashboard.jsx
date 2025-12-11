@@ -18,9 +18,9 @@ const AdminDashboard = () => {
     fetchImages();
   }, []);
 
-  const fetchImages = () => {
+  const fetchImages = async () => {
     try {
-      const storedImages = getImagesFromStorage();
+      const storedImages = await getImagesFromStorage();
       setImages(storedImages);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -39,7 +39,7 @@ const AdminDashboard = () => {
       const uploadPromises = Array.from(files).map(async (file, index) => {
         try {
           const result = await uploadToCloudinary(file);
-          const savedImage = saveImageToStorage(result);
+          const savedImage = await saveImageToStorage(result);
           setUploadProgress(((index + 1) / files.length) * 100);
           return savedImage;
         } catch (error) {
@@ -49,6 +49,7 @@ const AdminDashboard = () => {
       });
 
       await Promise.all(uploadPromises);
+      sessionStorage.removeItem('gallery_cache'); // Clear cache
       alert('Images uploaded successfully!');
       fetchImages();
     } catch (error) {
@@ -69,8 +70,9 @@ const AdminDashboard = () => {
       // Delete from Cloudinary (requires backend implementation)
       // await deleteFromCloudinary(publicId);
       
-      // Delete from local storage
-      deleteImageFromStorage(imageId);
+      // Delete from Firestore
+      await deleteImageFromStorage(imageId);
+      sessionStorage.removeItem('gallery_cache'); // Clear cache
       alert('Image deleted successfully!');
       fetchImages();
     } catch (error) {

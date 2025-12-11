@@ -1,39 +1,42 @@
-const STORAGE_KEY = 'gallery_images';
+import { db } from '../firebase';
+import { collection, addDoc, getDocs, deleteDoc, doc, query, orderBy } from 'firebase/firestore';
 
-export const saveImageToStorage = (imageData) => {
+const COLLECTION_NAME = 'gallery_images';
+
+export const saveImageToStorage = async (imageData) => {
   try {
-    const images = getImagesFromStorage();
     const newImage = {
-      id: Date.now().toString(),
       url: imageData.url,
       publicId: imageData.publicId,
       thumbnail: imageData.thumbnail,
       uploadedAt: new Date().toISOString()
     };
-    images.push(newImage);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(images));
-    return newImage;
+    const docRef = await addDoc(collection(db, COLLECTION_NAME), newImage);
+    return { id: docRef.id, ...newImage };
   } catch (error) {
     console.error('Error saving image:', error);
     throw error;
   }
 };
 
-export const getImagesFromStorage = () => {
+export const getImagesFromStorage = async () => {
   try {
-    const images = localStorage.getItem(STORAGE_KEY);
-    return images ? JSON.parse(images) : [];
+    const q = query(collection(db, COLLECTION_NAME), orderBy('uploadedAt', 'desc'));
+    const querySnapshot = await getDocs(q);
+    const images = [];
+    querySnapshot.forEach((doc) => {
+      images.push({ id: doc.id, ...doc.data() });
+    });
+    return images;
   } catch (error) {
     console.error('Error getting images:', error);
     return [];
   }
 };
 
-export const deleteImageFromStorage = (imageId) => {
+export const deleteImageFromStorage = async (imageId) => {
   try {
-    const images = getImagesFromStorage();
-    const filteredImages = images.filter(img => img.id !== imageId);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(filteredImages));
+    await deleteDoc(doc(db, COLLECTION_NAME, imageId));
     return true;
   } catch (error) {
     console.error('Error deleting image:', error);

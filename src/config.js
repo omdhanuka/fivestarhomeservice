@@ -2,7 +2,8 @@
 
 export const BUSINESS_INFO = {
   name: "Fivestar Home Service", // UPDATE
-  phone: "+917008041854", // UPDATE (include country code)
+  phone: "+917008041854",
+  landline: "06646 358 332", // UPDATE (include country code)
   whatsapp: "+917008041854", // UPDATE (include country code)
   email: "fivestarhomeservice999@gmail.com", // UPDATE
   address: "Near Thana Chowk, Mohanty Pada, W.No-11, Bargarh-768028, Odisha", // UPDATE

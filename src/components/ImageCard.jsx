@@ -12,6 +12,7 @@ const ImageCard = ({ imageUrl, onDelete, showDelete = false }) => {
       <img
         src={imageUrl}
         alt="Gallery"
+        loading="lazy"
         className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
       />
       {showDelete && showDeleteBtn && (

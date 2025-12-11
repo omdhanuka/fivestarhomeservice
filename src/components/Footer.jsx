@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BUSINESS_INFO } from '../config';
+import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'; // Importing social media icons
 
 
 const Footer = () => {
@@ -44,6 +45,19 @@ const Footer = () => {
               <li>🏗️ Civil Services</li>
             </ul>
           </div>
+        </div>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center space-x-6 mt-8">
+          <a href="https://instagram.com/FIVESTARHOMESERVICE_8055" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+            <FaInstagram size={24} />
+          </a>
+          <a href="https://www.facebook.com/share/1AFuRutNss/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+            <FaFacebook size={24} />
+          </a>
+          <a href="https://www.youtube.com/@fivestarhomeservice247" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+            <FaYoutube size={24} />
+          </a>
         </div>
 
         {/* Divider */}

@@ -47,12 +47,12 @@ const Services = () => {
       services: [
         {
           title: 'Appliance Repairing',
-          description: 'Expert repair for all electrical appliances',
+          description: 'We repair all major appliances including AC, Fridge, Washing Machine, and Geyser — fast, reliable, and expert service at your doorstep',
           icon: '🔧'
         },
         {
           title: 'Wiring & Repairing',
-          description: 'Professional installation and repair of wiring systems',
+          description: 'Safe & professional wiring installation and repairs for homes and offices. Ensure electrical safety and efficiency with our expert services.',
           icon: '⚡'
         }
       ]
@@ -63,12 +63,12 @@ const Services = () => {
       services: [
         {
           title: 'New Plumbing',
-          description: 'New pipe and fitting installations',
+          description: 'Fresh pipe layouts and fittings installed with expert precision',
           icon: '🚰'
         },
         {
           title: 'Repair Old Plumbing Issues',
-          description: 'Quick fixes for leaks, blockages, and plumbing issues',
+          description: 'Fast solutions for leaks, blockages, and all plumbing faults.',
           icon: '🛠️'
         }
       ]
@@ -79,12 +79,12 @@ const Services = () => {
       services: [
         {
           title: 'New Carpentry',
-          description: 'Custom furniture and wooden installations',
+          description: 'Custom-made furniture and premium wooden installations.',
           icon: '🪚'
         },
         {
           title: 'Old Carpentry Fixes',
-          description: 'Restoration and repair of wooden structures',
+          description: 'Repair, restore, and refinish old wooden structures with care.',
           icon: '🔨'
         }
       ]
@@ -95,12 +95,12 @@ const Services = () => {
       services: [
         {
           title: 'Minor Repair Tasks',
-          description: 'Small repairs for walls, ceilings, and floors',
+          description: 'Quick fixes for damaged walls, ceilings, and flooring.',
           icon: '🧱'
         },
         {
           title: 'Small Construction Fixes',
-          description: 'Quick construction fixes and finishing work',
+          description: 'Small construction corrections and finishing work done neatly.',
           icon: '⚒️'
         }
       ]

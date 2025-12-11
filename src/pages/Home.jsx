@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { BUSINESS_INFO, STATISTICS } from '../config';
 
 const Home = () => {
-  const whatsappUrl = `https://wa.me/${BUSINESS_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=Hi, I need appliance repair service`;
+  const whatsappUrl = `https://wa.me/${BUSINESS_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=Hello! I want to book a service. Please assist.`;
 
   const featuredServices = [
     { icon: '⚡', title: 'Electrical Services', desc: 'Appliance & wiring repair' },

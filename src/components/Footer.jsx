@@ -39,6 +39,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
+              <li>❄️ AC Repairing & Services</li>
               <li>⚡ Electrical Services</li>
               <li>🚰 Plumbing Services</li>
               <li>🪵 Carpentry Services</li>

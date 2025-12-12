@@ -21,7 +21,7 @@ const Home = () => {
               Complete Home Repair & Maintenance Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Electrical, Plumbing, Carpentry & Minor Civil Work — Fast and Reliable
+              Specialists in AC Repair & Maintenance — Along with Trusted Electrical, Plumbing, Carpentry & Home Repair Services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -115,11 +115,11 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="ml-4">
+                <div className="ml-4 flex-1 min-w-0">
                   <p className="text-sm text-gray-600">Email</p>
                   <a
                     href={`mailto:${BUSINESS_INFO.email}`}
-                    className="text-lg font-medium text-gray-800 hover:text-primary"
+                    className="text-lg font-medium text-gray-800 hover:text-primary break-words"
                   >
                     {BUSINESS_INFO.email}
                   </a>
